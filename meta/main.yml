@@ -1,20 +1,21 @@
+---
 galaxy_info:
   role_name: ntp
   author: ricsanfre
   description: NTP (chrony) installation and configuration role
-  
+
   license: license (MIT)
 
   min_ansible_version: 2.1
 
   platforms:
     - name: Ubuntu
-      versions: 
-      - fossa
+      versions:
+        - focal
 
   galaxy_tags:
     - system
     - ntp
-    - chrony  
+    - chrony
 
 dependencies: []

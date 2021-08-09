@@ -2,7 +2,8 @@
 # defaults file for ntp
 ntp_timezone: Europe/Madrid
 
-# NTP package name and daemon. Default pakage for Ubuntu: chrony. ntp is deprecated
+# NTP package name and daemon.
+# Default pakage for Ubuntu: chrony. ntp is deprecated
 ntp_daemon: chrony
 ntp_package: chrony
 
@@ -19,8 +20,8 @@ ntp_config_file: /etc/chrony/chrony.conf
 #          documentation for details.
 # See: https://chrony.tuxfamily.org/doc/4.0/chrony.conf.html
 #
-# Example of configuring a pool and customising the pool specific maxsources option:
-# chrony_ntp_servers:
+# Config example: a pool and customising the pool specific maxsources option:
+# ntp_servers:
 #   - server: pool.ntp.org
 #     type: pool
 #     options:
