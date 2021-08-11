@@ -1,0 +1,28 @@
+---
+- name: Converge
+  hosts: all
+  become: yes
+  gather_facts: yes
+
+  roles:
+    - role: ricsanfre.ntp
+      ntp_servers:
+        - server: 0.ubuntu.pool.ntp.org
+          type: pool
+          options:
+            - option: iburst
+            - option: maxsources
+              val: 1
+        - server: 1.ubuntu.pool.ntp.org
+          type: pool
+          options:
+            - option: iburst
+            - option: maxsources
+              val: 1
+        - server: 2.ubuntu.pool.ntp.org
+          type: pool
+          options:
+            - option: iburst
+            - option: maxsources
+              val: 2
+      ntp_allow_hosts: [10.0.0.0/24]

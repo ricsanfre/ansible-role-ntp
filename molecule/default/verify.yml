@@ -1,0 +1,19 @@
+---
+# This is an example playbook to execute Ansible tests.
+
+- name: Verify
+  hosts: all
+  gather_facts: false
+  vars:
+    ntp_success_output: "Leap status     : Normal"
+  tasks:
+    - name: check if time is synchronised
+      command:
+        cmd: "chronyc tracking"
+      register: npt_check_time_synchronised
+      failed_when:
+        - ntp_success_output not in npt_check_time_synchronised.stdout
+      changed_when: no
+      until:
+        - npt_check_time_synchronised is succeeded
+      retries: 16
