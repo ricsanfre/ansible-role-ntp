@@ -1,6 +1,9 @@
 Ansible Role: NTP
 =========
 
+[![CI](https://github.com/ricsanfre/ansible-role-ntp/actions/workflows/ci.yml/badge.svg)](https://github.com/ricsanfre/ansible-role-ntp/actions/workflows/ci.yml)
+
+
 Install and configure NTP (chrony) on Linux.
 
 Requirements
